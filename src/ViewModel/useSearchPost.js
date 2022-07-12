@@ -11,7 +11,6 @@ const useSearch =()=>{
             )
         })
     }
-    
     return {getPost,setSearch}
 }
 export default useSearch
