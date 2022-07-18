@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getPostAPI } from "../Model/API/postApi";
+import { getPostAPI } from "../Model/Api/postApi";
 
 const useQueryPost = () => {
   const { data, error, isError, isLoading } = useQuery("posts", getPostAPI);

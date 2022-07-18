@@ -1,5 +1,5 @@
 import { useState } from "react";
-import{getUser} from '../Model/database/index';
+import{getUser} from '../Model/Json/index';
 
 const useSearchUser = () => {
   const [search, setSearch] = useState([]);

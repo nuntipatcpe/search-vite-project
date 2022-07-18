@@ -17,7 +17,7 @@ function Post() {
   if (isError) {
     return <div> Error {error.message}</div>;
   }
-  
+
   return (
     <div className="container">
       <h1>Post API</h1>
@@ -26,16 +26,18 @@ function Post() {
         placeholder="search post"
         onChange={(e) => setSearch(e.target.value)}
       />
-      {getPost(data).length !== 0 ? getPost(data).map((post, index) => {
-        return (
-          <div key={index} className="container-post">
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
-          </div>
-        );
-      }) :<h3>No data !</h3> }
-
-    
+      {getPost(data).length !== 0 ? (
+        getPost(data).map((post, index) => {
+          return (
+            <div key={index} className="container-post">
+              <h1>{post.title}</h1>
+              <p>{post.body}</p>
+            </div>
+          );
+        })
+      ) : (
+        <h3>No data !</h3>
+      )}
     </div>
   );
 }
